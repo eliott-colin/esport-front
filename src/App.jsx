@@ -3,35 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Events from './components/events/events'
-import Title from './components/title/title'
+import UniversitiesList from "./components/UniversitiesList/universities.jsx";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Title title="Home" color="black" fontSize="24px" arrow={false} />
       <Events />
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <UniversitiesList universities={[{name: "lol", image: "lol1.png"}, {name: "lol2", image: "lol2.png"}, {name: "lol2", image: "lol2.png"}, {name: "lol2", image: "lol2.png"}, {name: "lol2", image: "lol2.png"}, {name: "lol2", image: "lol2.png"},{name: "lol2", image: "lol2.png"}]} />
     </>
   )
 }
