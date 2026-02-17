@@ -1,12 +1,15 @@
-import eventImage from '/event.jpg'
 import './event.css'
 
-function Event() {
+function Event(data) {
+  const baseUrl = import.meta.env.BASE_URL;
+  console.log(data)
   return (
     <div>
-      <img src={eventImage} alt="Event Component" />
-        <h2>Welcome to the Event Component !</h2>
-        <p>17/06/2024</p>
+      <div className='event-image-wrapper'>
+        <img className='event-img' src={`${baseUrl}${data.data.image}`} alt={data.data.name} />
+      </div>
+        <h2 className='event-h2'>{data.data.name}</h2>
+        <p>{data.data.date}</p>
     </div>
   )
 }
