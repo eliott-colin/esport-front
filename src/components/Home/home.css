@@ -2,7 +2,7 @@ body {
     background-color: #F9E3FF;
 }
 #root {
-    max-width: 1280px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 2rem;
     padding-top: 100px;
