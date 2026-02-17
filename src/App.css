@@ -1,7 +1,11 @@
+body {
+  background-color: #F9E3FF;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 100px;
   text-align: center;
 }
 .logo {
