@@ -13,6 +13,7 @@ function UniversitiesList({universities}) {
                             <img src={`/${item.image}`} alt={item.name}/>
                         </div>
                         <p>{item.name}</p>
+                        <p className="smallText">{item.ville} - {item.postalCode}</p>
                     </div>
                 ))}
             </div>

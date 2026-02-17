@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Events />
-      <UniversitiesList universities={[{name: "lol", image: "lol1.png"}, {name: "lol2", image: "lol2.png"}, {name: "lol2", image: "lol2.png"}, {name: "lol2", image: "lol2.png"}, {name: "lol2", image: "lol2.png"}, {name: "lol2", image: "lol2.png"},{name: "lol2", image: "lol2.png"}]} />
+      <UniversitiesList universities={[{name: "lol", image: "lol1.png", ville: "Bordeaux", postalCode: 33330}, {name: "lol2", image: "lol2.png", ville: "Bordeaux", postalCode: 33330}, {name: "lol2", image: "lol2.png", ville: "Bordeaux", postalCode: 33330}, {name: "lol2", image: "lol2.png", ville: "Bordeaux", postalCode: 33330}, {name: "lol2", image: "lol2.png", ville: "Bordeaux", postalCode: 33330}, {name: "lol2", image: "lol2.png", ville: "Bordeaux", postalCode: 33330},{name: "lol2", image: "lol2.png", ville: "Bordeaux", postalCode: 33330}]} />
     </>
   )
 }
