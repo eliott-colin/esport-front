@@ -15,9 +15,12 @@ const Burger = ({ open, setOpen, isLogged }) => {
           <div />
           <div />
         </button>
-        <div className="navbar-logo">
-          <img src={logo} alt="logo"></img>
-        </div>
+        
+        <Link to="/finalfocus/">
+          <div className="navbar-logo">
+            <img src={logo} alt="logo"></img>
+          </div>
+        </Link>
 
         {isLogged ? (
           <button className="navbar-cta-mobile">Ta mere</button>

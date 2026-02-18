@@ -8,10 +8,10 @@ function Profile() {
     name: "PedroPedro",
   };
   return (
-    <>
+    <div className="navBarSpace">
       <ProfileHeader props={data} />
       <div>Profile</div>
-    </>
+    </div>
   );
 }
 
