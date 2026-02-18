@@ -1,8 +1,9 @@
 import React from "react";
 import "./burger.css";
 import logo from "/logo.png";
+import { Link } from "react-router-dom";
 
-const Burger = ({ open, setOpen }) => {
+const Burger = ({ open, setOpen, isLogged }) => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -18,7 +19,13 @@ const Burger = ({ open, setOpen }) => {
           <img src={logo} alt="logo"></img>
         </div>
 
-        <button className="navbar-cta-mobile">Rejoindre</button>
+        {isLogged ? (
+          <button className="navbar-cta-mobile">Ta mere</button>
+        ) : (
+          <Link to="/finalfocus/register">
+            <button className="navbar-cta-mobile">Rejoindre</button>
+          </Link>
+        )}
       </div>
     </nav>
   );
