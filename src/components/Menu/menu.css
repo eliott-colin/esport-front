@@ -1,0 +1,49 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #effffa;
+  transform: translateX(-100%);
+  height: 100vh;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  padding: 0;
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+@media (max-width: 576px) {
+  .menu {
+    width: 100%;
+  }
+}
+
+.menu a {
+  font-family: "Changa One", "sans-serif";
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(89deg, #f80dfd -0.19%, #8b1edf 103.13%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  transition: color 0.3s linear;
+}
+
+@media (max-width: 576px) {
+  .menu a {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.menu a:hover {
+  color: #343078;
+}

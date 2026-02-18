@@ -1,20 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../components/Home/home.jsx";
 import ErrorPage from "../errors/404.jsx";
-import App from "../App.jsx"
+import App from "../App.jsx";
 
 const router = createBrowserRouter([
-    {
+  {
+    path: "/finalfocus/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
         path: "/finalfocus/",
-        element: <App/>,
-        errorElement: <ErrorPage />,
-        children: [
-            {
-                path: "/finalfocus/",
-                element: <Home />
-            },
-        ]
-    }
+        element: <Home />,
+      },
+    ],
+  },
 ]);
 
 export default router;
