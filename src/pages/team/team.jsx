@@ -4,7 +4,7 @@ import Teams from "../../components/Teams/teams";
 
 function Team() {
   return (
-    <div>
+    <div className="navBarSpace">
       <Title
         title="EQUIPES"
         color="linear-gradient(89deg, #F80DFD -0.19%, #8B1EDF 103.13%)"
