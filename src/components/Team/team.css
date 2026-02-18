@@ -1,0 +1,39 @@
+.team-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    gap: 16px;
+    flex: 1 0 0;
+    align-self: stretch;
+    background: linear-gradient(white, white) padding-box,
+              linear-gradient(89deg, #F80DFD -0.19%, #8B1EDF 103.13%) border-box;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    margin: 16px;
+}
+.team-image-wrapper{
+        margin: 0 16px;
+        border: 2px solid red;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+}
+.team-text-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 5px;
+    h2{
+        margin: 0;
+        font-size: 16px;
+    }
+}
+.team-game-wrapper{
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    border-radius: 0 12px 12px 0;
+    
+}
