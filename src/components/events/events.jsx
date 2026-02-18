@@ -1,6 +1,7 @@
-import Event from "../event/event";
-import Title from "../title/title";
-import "./events.css";
+import Event from '../Event/event'
+import Title from '../Title/title'
+import './events.css'
+
 
 function Events() {
   return (

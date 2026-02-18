@@ -1,6 +1,6 @@
-import React from "react";
-import "./universities.css";
-import Title from "../title/title.jsx";
+import React from 'react'
+import "./universities.css"
+import Title from "../Title/title.jsx";
 
 function UniversitiesList({ universities }) {
   const baseUrl = import.meta.env.BASE_URL;
