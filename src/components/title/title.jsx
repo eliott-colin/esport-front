@@ -1,7 +1,7 @@
 import React from "react";
 import arrowImage from "/arrow.png";
 
-function Title({ title, color, colorFont, fontSize, arrow }) {
+function Title({ title, color, colorFont, fontSize, arrow, center = false }) {
   return (
     <div
       style={{
@@ -10,7 +10,7 @@ function Title({ title, color, colorFont, fontSize, arrow }) {
         padding: "8px 0",
         alignItems: "center",
         flexShrink: 0,
-        alignSelf: "stretch",
+        alignSelf: center ? "center" : "stretch",
       }}
     >
       <h1

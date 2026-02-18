@@ -25,7 +25,7 @@ function Navbar() {
     }
 
     return (
-      <Link to="/finalfocus/profil">
+      <Link to="/finalfocus/profile">
         <button className="navbar-cta">Profil</button>
       </Link>
     );
@@ -35,7 +35,9 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
+          <Link to="/finalfocus/">
           <img src={logo} alt="logo"></img>
+            </Link>
         </div>
 
         <ul className="navbar-menu">
@@ -55,9 +57,9 @@ function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#equipes" className="nav-link">
-              Équipes
-            </a>
+            <Link className="nav-link" to="/finalfocus/teams">
+              Equipes
+            </Link>
           </li>
         </ul>
         {renderAuthButton()}

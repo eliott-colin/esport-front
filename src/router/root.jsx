@@ -5,6 +5,9 @@ import App from "../App.jsx";
 import Team from "../pages/team/team.jsx";
 import Login from "../pages/login/login.jsx";
 import Register from "../pages/register/register.jsx";
+import TeamDetails from "../pages/teamDetails/teamDetails.jsx";
+import Admin from "../pages/admin/admin.jsx";
+import Profile from "../pages/profile/profile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,13 +24,26 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/finalfocus/register",
+        path: "/finalfocus/register", 
         element: <Register />,
       },
       {
-        path: "/finalfocus/team",
+        path: "/finalfocus/teams",
         element: <Team />,
       },
+            {
+        path: "/finalfocus/teams/:id",
+        element: <TeamDetails />,
+      },
+       {
+        path: "/finalfocus/admin",
+        element: <Admin />,
+      },
+      {
+        path: "/finalfocus/profile",
+        element: <Profile />,
+      },
+
     ],
   },
 ]);
