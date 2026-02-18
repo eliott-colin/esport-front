@@ -75,7 +75,7 @@ function Register() {
   };
 
   return (
-    <div className="register-container">
+    <div className="register-container navBarSpace">
       <div className="register-card">
         <h1 className="register-title">Créer un compte</h1>
 

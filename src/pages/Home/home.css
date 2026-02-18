@@ -1,10 +1,13 @@
 body {
   background-color: #f9e3ff;
 }
+.navBarSpace {
+  padding-top: 100px;
+}
+
 #root {
   max-width: 90%;
   margin: 0 auto;
-  padding-top: 100px;
   text-align: center;
 }
 .logo {

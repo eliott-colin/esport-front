@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./home.css";
-import Events from "../events/events.jsx";
-import UniversitiesList from "../UniversitiesList/universities.jsx";
-import Spacer from "../Spacer/spacer.jsx";
-import Button from "../Button/button.jsx";
+import Events from "../../components/events/events.jsx";
+import UniversitiesList from "../../components/UniversitiesList/universities.jsx";
+import Spacer from "../../components/Spacer/spacer.jsx";
+import Button from "../../components/Button/button.jsx";
 
 function Home() {
   const [count, setCount] = useState(0);
   return (
-    <>
+    <div className="navBarSpace">
       <Events />
       <Spacer size="30px" />
       <UniversitiesList
@@ -65,7 +65,7 @@ function Home() {
           fontSize: "16px",
         }}
       />
-    </>
+    </div>
   );
 }
 
