@@ -2,7 +2,6 @@ import './event.css'
 
 function Event(data) {
   const baseUrl = import.meta.env.BASE_URL;
-  console.log(data)
   return (
     <div>
       <div className='event-image-wrapper'>

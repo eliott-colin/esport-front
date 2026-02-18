@@ -1,5 +1,5 @@
-import Event from '../event/event'
-import Title from '../title/title'
+import Event from '../Event/event'
+import Title from '../Title/title'
 import './events.css'
 
 function Events() {
