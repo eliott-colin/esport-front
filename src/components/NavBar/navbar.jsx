@@ -25,7 +25,7 @@ function Navbar() {
     }
 
     return (
-      <Link to="/finalfocus/profil">
+      <Link to="/finalfocus/profile">
         <button className="navbar-cta">Profil</button>
       </Link>
     );
