@@ -1,5 +1,5 @@
-import React from 'react'
-import "./universities.css"
+import React from "react";
+import "./universities.css";
 import Title from "../Title/title.jsx";
 
 function UniversitiesList({ universities }) {

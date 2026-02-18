@@ -3,7 +3,7 @@ import "./home.css";
 import Events from "../events/events.jsx";
 import UniversitiesList from "../UniversitiesList/universities.jsx";
 import Spacer from "../Spacer/spacer.jsx";
-import Button from '../Button/button.jsx';
+import Button from "../Button/button.jsx";
 
 function Home() {
   const [count, setCount] = useState(0);
@@ -57,7 +57,14 @@ function Home() {
           },
         ]}
       />
-     <Button data={{text: "Voir plus", color: "linear-gradient(89deg, #F80DFD -0.19%, #8B1EDF 103.13%)", colorFont: "#FFFFFF", fontSize: "16px" }} />
+      <Button
+        data={{
+          text: "Voir plus",
+          color: "linear-gradient(89deg, #F80DFD -0.19%, #8B1EDF 103.13%)",
+          colorFont: "#FFFFFF",
+          fontSize: "16px",
+        }}
+      />
     </>
   );
 }
