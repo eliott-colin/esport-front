@@ -1,3 +1,45 @@
 .profile {
-    width: 100%;
+  width: 100%;
+}
+
+.profile-content {
+  display: flex;
+  gap: 32px;
+  padding: 0 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-col-left {
+  flex: 2;
+  min-width: 0;
+}
+
+.profile-col-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-events {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+
+.profile-events::-webkit-scrollbar {
+  display: none;
+}
+
+.profile-teams {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .profile-content {
+    flex-direction: column;
+    gap: 16px;
+  }
 }

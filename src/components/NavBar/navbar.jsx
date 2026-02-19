@@ -47,9 +47,9 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <a href="#events" className="nav-link">
+            <Link className="nav-link" to="/finalfocus/events">
               Événements
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a href="#universites" className="nav-link">
@@ -58,7 +58,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/finalfocus/teams">
-              Equipes
+              Équipes
             </Link>
           </li>
         </ul>

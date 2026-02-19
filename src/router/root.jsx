@@ -8,6 +8,7 @@ import Register from "../pages/register/register.jsx";
 import TeamDetails from "../pages/teamDetails/teamDetails.jsx";
 import Admin from "../pages/admin/admin.jsx";
 import Profile from "../pages/profile/profile.jsx";
+import EventsPage from "../pages/eventsPage/eventsPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/finalfocus/profile",
         element: <Profile />,
+      },
+      {
+        path: "/finalfocus/events",
+        element: <EventsPage />,
       },
 
     ],
