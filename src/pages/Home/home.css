@@ -5,6 +5,7 @@ body {
 .navBarSpace {
   padding-top: 100px;
   max-width: 90%;
+  width: 100%;
 }
 
 #root {

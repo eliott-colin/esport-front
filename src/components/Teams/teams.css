@@ -1,3 +1,8 @@
+.teams-section {
+  container-type: inline-size;
+  width: 100%;
+}
+
 .teams-wrapper {
   display: grid;
   padding: 8px 0;
@@ -15,5 +20,11 @@
 @media (max-width: 768px) {
   .teams-wrapper {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@container (max-width: 400px) {
+  .teams-wrapper {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

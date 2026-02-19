@@ -7,6 +7,7 @@ import Event from "../../components/Event/event.jsx";
 import TeamComponent from "../../components/Team/team.jsx";
 import Spacer from "../../components/Spacer/spacer.jsx";
 import "./profile.css";
+import Teams from "../../components/Teams/teams.jsx";
 
 const PROFILE_TABS = [
   { id: "informations", label: "Informations" },
@@ -31,8 +32,8 @@ const MOCK_EVENTS = [
 ];
 
 const MOCK_TEAMS = [
-  { image: "./l.png", name: "Team Alpha", members: "5 membres" },
-  { image: "./lol1.png", name: "Team Beta", members: "4 membres" },
+  { image: "./team1.png", name: "Team Alpha", members: "5 membres" },
+  { image: "./team2.png", name: "Team Beta", members: "4 membres" },
   { image: "./logo.png", name: "Team Gamma", members: "6 membres" },
   { image: "./lol2.png", name: "Team Delta", members: "3 membres" },
 ];
@@ -92,16 +93,7 @@ function Profile() {
             fontSize="2.5vh"
             arrow={true}
           />
-          <div className="profile-teams">
-            {MOCK_TEAMS.map((team, index) => (
-              <TeamComponent
-                key={index}
-                image={team.image}
-                name={team.name}
-                members={team.members}
-              />
-            ))}
-          </div>
+          <Teams data={MOCK_TEAMS} />
         </div>
       </div>
     </div>
