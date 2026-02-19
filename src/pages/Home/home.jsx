@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./home.css";
-import Events from "../../components/events/events.jsx";
+import Events from "../../components/Events/events.jsx";
 import UniversitiesList from "../../components/UniversitiesList/universities.jsx";
 import Spacer from "../../components/Spacer/spacer.jsx";
 import Button from "../../components/Button/button.jsx";

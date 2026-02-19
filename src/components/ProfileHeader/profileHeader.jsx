@@ -1,12 +1,11 @@
 import React from "react";
 import "./profileHeader.css";
-import Title from "../title/title.jsx";
+import Title from "../Title/title.jsx";
 import Spacer from "../Spacer/spacer.jsx";
 
 function ProfileHeader({ props }) {
   const baseUrl = import.meta.env.BASE_URL;
   return (
-    <>
       <div className="profile-header">
         <div className="profileBg">
           <img src={`${baseUrl}${props.bigImage}`} alt="Profile BackGround" />
@@ -23,7 +22,6 @@ function ProfileHeader({ props }) {
           center="true"
         />
       </div>
-    </>
   );
 }
 

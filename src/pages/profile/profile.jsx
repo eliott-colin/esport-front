@@ -1,5 +1,6 @@
 import React from "react";
 import ProfileHeader from "../../components/ProfileHeader/profileHeader.jsx";
+import "./profile.css"
 
 function Profile() {
   const data = {
@@ -8,7 +9,7 @@ function Profile() {
     name: "PedroPedro",
   };
   return (
-    <div className="navBarSpace">
+    <div className="profile">
       <ProfileHeader props={data} />
       <div>Profile</div>
     </div>
