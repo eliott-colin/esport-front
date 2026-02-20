@@ -36,8 +36,8 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/finalfocus/">
-          <img src={logo} alt="logo"></img>
-            </Link>
+            <img src={logo} alt="logo"></img>
+          </Link>
         </div>
 
         <ul className="navbar-menu">

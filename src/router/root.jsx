@@ -9,6 +9,7 @@ import TeamDetails from "../pages/teamDetails/teamDetails.jsx";
 import Admin from "../pages/admin/admin.jsx";
 import Profile from "../pages/profile/profile.jsx";
 import EventsPage from "../pages/eventsPage/eventsPage.jsx";
+import EventDetails from "../pages/eventDetails/eventDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,18 +26,18 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/finalfocus/register", 
+        path: "/finalfocus/register",
         element: <Register />,
       },
       {
         path: "/finalfocus/teams",
         element: <Team />,
       },
-            {
+      {
         path: "/finalfocus/teams/:id",
         element: <TeamDetails />,
       },
-       {
+      {
         path: "/finalfocus/admin",
         element: <Admin />,
       },
@@ -48,7 +49,10 @@ const router = createBrowserRouter([
         path: "/finalfocus/events",
         element: <EventsPage />,
       },
-
+      {
+        path: "/finalfocus/events/:id",
+        element: <EventDetails />,
+      },
     ],
   },
 ]);

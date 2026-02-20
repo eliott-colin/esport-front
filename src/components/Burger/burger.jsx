@@ -15,7 +15,7 @@ const Burger = ({ open, setOpen, isLogged }) => {
           <div />
           <div />
         </button>
-        
+
         <Link to="/finalfocus/">
           <div className="navbar-logo">
             <img src={logo} alt="logo"></img>

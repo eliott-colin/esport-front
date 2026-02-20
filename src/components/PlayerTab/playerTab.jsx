@@ -1,11 +1,11 @@
 import React from "react";
 import "./playerTab.css";
 
-function PlayerTab({data}) {
+function PlayerTab({ data }) {
   return (
     <div className="player-wrapper">
       <div className="player-image-wrapper">
-        <img src={'/finalfocus/' + data.image} alt={data.name} />
+        <img src={"/finalfocus/" + data.image} alt={data.name} />
       </div>
       <div className="player-text-wrapper">
         <p>{data.name}</p>

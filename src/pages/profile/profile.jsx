@@ -32,7 +32,12 @@ const MOCK_EVENTS = [
 ];
 
 const MOCK_TEAMS = [
-  { image: "./team1.png", name: "Team Alpha", members: "5 membres" },
+  {
+    image: "./team1.png",
+    name: "Team Alpha",
+    members: "5 membres",
+    imageGame: "f.png",
+  },
   { image: "./team2.png", name: "Team Beta", members: "4 membres" },
   { image: "./logo.png", name: "Team Gamma", members: "6 membres" },
   { image: "./lol2.png", name: "Team Delta", members: "3 membres" },

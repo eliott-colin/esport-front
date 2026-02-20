@@ -94,4 +94,3 @@ function SegmentedTabs({ tabs, value, onChange, className }) {
 }
 
 export default SegmentedTabs;
-
