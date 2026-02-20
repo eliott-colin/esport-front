@@ -12,7 +12,7 @@
   border: 2px solid transparent;
   border-radius: 14px;
   margin: 16px;
-  img{
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -31,12 +31,12 @@
   flex-direction: column;
   margin: 0;
   gap: 5px;
-  p{
-    color: #1D1B20;
+  p {
+    color: #1d1b20;
   }
 }
 .player-game-wrapper {
-  width:48px;
+  width: 48px;
   height: 48px;
   background-size: contain;
   border-radius: 0 12px 12px 0;

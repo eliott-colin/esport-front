@@ -2,7 +2,7 @@ import TeamComponent from "../Team/team";
 import "./teams.css";
 import { Link } from "react-router-dom";
 
-function Teams({data}) {
+function Teams({ data }) {
   return (
     <div className="teams-section">
       <div className="teams-wrapper">

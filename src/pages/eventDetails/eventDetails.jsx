@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function EventDetails() {
-    return (
-        <div>EventDetails</div>
-    )
+  return <div>EventDetails</div>;
 }
 
-export default EventDetails
+export default EventDetails;
