@@ -1,4 +1,4 @@
-.team-wrapper {
+.player-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,33 +13,31 @@
   border-radius: 14px;
   margin: 16px;
   img{
-    width: inherit;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
-.team-image-wrapper {
-  margin: 0 16px;
+.player-image-wrapper {
+  margin: 10px 16px;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   overflow: hidden;
 }
-.team-text-wrapper {
+.player-text-wrapper {
   display: flex;
   flex-direction: column;
   margin: 0;
   gap: 5px;
-  h2 {
-    margin: 0;
-    font-size: 16px;
-    color: #1D1B20;
-  }
   p{
     color: #1D1B20;
   }
 }
-.team-game-wrapper {
-  width: 80px;
-  height: 80px;
+.player-game-wrapper {
+  width:48px;
+  height: 48px;
   background-size: contain;
   border-radius: 0 12px 12px 0;
 }
