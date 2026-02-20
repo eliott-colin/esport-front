@@ -1,7 +1,7 @@
 import React from "react";
 import "./team.css";
 
-function TeamComponent({data}) {
+function TeamComponent({ data }) {
   return (
     <div className="team-wrapper">
       <div className="team-image-wrapper">

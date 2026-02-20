@@ -12,7 +12,7 @@
   border: 2px solid transparent;
   border-radius: 14px;
   margin: 16px;
-  img{
+  img {
     width: inherit;
   }
 }
@@ -31,10 +31,10 @@
   h2 {
     margin: 0;
     font-size: 16px;
-    color: #1D1B20;
+    color: #1d1b20;
   }
-  p{
-    color: #1D1B20;
+  p {
+    color: #1d1b20;
   }
 }
 .team-game-wrapper {

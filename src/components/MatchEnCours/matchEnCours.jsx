@@ -46,4 +46,3 @@ function MatchEnCours({ match }) {
 }
 
 export default MatchEnCours;
-
