@@ -1,0 +1,347 @@
+    .event-details {
+  width: 100%;
+}
+
+.event-details-content {
+  display: flex;
+  gap: 32px;
+  padding: 0 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event-details-col-left {
+  flex: 2;
+  min-width: 0;
+}
+
+.event-details-col-right {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Info Card ── */
+.event-info-card {
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(89deg, #f80dfd -0.19%, #8b1edf 103.13%) border-box;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.event-info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.event-info-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8b1edf;
+  min-width: 140px;
+}
+
+.event-info-value {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #1d1b20;
+}
+
+/* ── Status Badge ── */
+.event-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.event-status-badge--actif {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.event-status-badge--inactif {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.event-status-badge--en_attente {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.event-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* ── Description ── */
+.event-description-card {
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(89deg, #f80dfd -0.19%, #8b1edf 103.13%) border-box;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.event-description-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1d1b20;
+  margin: 0;
+}
+
+/* ── Teams participating ── */
+.event-teams-card {
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(89deg, #f80dfd -0.19%, #8b1edf 103.13%) border-box;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.event-team-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0e6f6;
+}
+
+.event-team-row:last-child {
+  border-bottom: none;
+}
+
+.event-team-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e0d0e8;
+  background: #f3e8ff;
+}
+
+.event-team-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1d1b20;
+}
+
+.event-team-members {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #8b8b9e;
+  margin-left: auto;
+}
+
+/* ── Brackets / Matchs ── */
+.event-brackets-card {
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(89deg, #f80dfd -0.19%, #8b1edf 103.13%) border-box;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.event-match-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #faf5ff;
+  border-radius: 12px;
+  gap: 12px;
+}
+
+.event-match-teams {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.event-match-vs {
+  font-family: "Changa One", sans-serif;
+  font-size: 14px;
+  color: #8b1edf;
+  margin: 0 8px;
+}
+
+.event-match-score {
+  font-family: "Changa One", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(89deg, #f80dfd -0.19%, #8b1edf 103.13%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  min-width: 60px;
+  text-align: center;
+}
+
+.event-match-round {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8b1edf;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.event-match-date {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #8b8b9e;
+}
+
+.event-match-team-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d1b20;
+}
+
+.event-match-team-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e0d0e8;
+  background: #f3e8ff;
+}
+
+/* ── Referees ── */
+.event-referees-card {
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(89deg, #f80dfd -0.19%, #8b1edf 103.13%) border-box;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.event-referee-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0e6f6;
+}
+
+.event-referee-row:last-child {
+  border-bottom: none;
+}
+
+.event-referee-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e0d0e8;
+  background: #f3e8ff;
+}
+
+.event-referee-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d1b20;
+}
+
+.event-referee-email {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #8b8b9e;
+}
+
+/* ── Stats ── */
+.event-stats-card {
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(89deg, #f80dfd -0.19%, #8b1edf 103.13%) border-box;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.event-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 100px;
+  flex: 1;
+}
+
+.event-stat-value {
+  font-family: "Changa One", sans-serif;
+  font-size: 24px;
+  background: linear-gradient(89deg, #f80dfd -0.19%, #8b1edf 103.13%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.event-stat-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8b8b9e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .event-details-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .event-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .event-info-label {
+    min-width: unset;
+  }
+
+  .event-match-row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+

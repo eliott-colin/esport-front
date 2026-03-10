@@ -29,15 +29,95 @@
 .player-text-wrapper {
   display: flex;
   flex-direction: column;
+  flex: 1;
   margin: 0;
   gap: 5px;
   p {
     color: #1d1b20;
   }
 }
-.player-game-wrapper {
-  width: 48px;
-  height: 48px;
-  background-size: contain;
-  border-radius: 0 12px 12px 0;
+
+/* ── Bouton 3 points + dropdown ── */
+.player-actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.player-dots-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.player-dots-btn:hover {
+  background: rgba(139, 30, 223, 0.08);
+}
+
+.player-dots-btn .dot {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #8b1edf;
+}
+
+/* Dropdown menu */
+.player-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: 100;
+  min-width: 180px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  border: 1px solid #eee;
+  padding: 6px 0;
+  animation: playerDropdownFadeIn 0.12s ease-out;
+}
+
+@keyframes playerDropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.player-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  color: #1d1b20;
+  transition: background 0.12s;
+}
+
+.player-dropdown-item:hover {
+  background: rgba(139, 30, 223, 0.07);
+}
+
+.player-dropdown-item--danger {
+  color: #d32f2f;
+}
+
+.player-dropdown-item--danger:hover {
+  background: rgba(211, 47, 47, 0.07);
 }

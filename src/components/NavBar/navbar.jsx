@@ -52,9 +52,9 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <a href="#universites" className="nav-link">
+            <Link className="nav-link" to="/finalfocus/universities">
               Universités
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/finalfocus/teams">

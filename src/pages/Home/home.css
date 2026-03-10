@@ -14,6 +14,122 @@ body {
   margin: 0 auto;
   text-align: center;
 }
+
+/* ── Hero Header ── */
+.hero {
+  width: 100%;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  background: url("/finalfocus/hero-bg.jpg") center / cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 0, 40, 0.55) 0%,
+    rgba(139, 30, 223, 0.45) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 56px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 100px;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-title {
+  font-family: "changa one", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 8px 0 0 0;
+  line-height: 1.15;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.hero-highlight {
+  background: linear-gradient(89deg, #f80dfd -0.19%, #8b1edf 103.13%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  max-width: 580px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 400;
+}
+
+.hero-subtitle strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-actions .button-wrapper {
+  margin: 10px 6px;
+}
+
+.hero-actions .button-wrapper .button {
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 36px 20px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ── existing styles ── */
 .logo {
   height: 6em;
   padding: 1.5em;

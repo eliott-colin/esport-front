@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProfileHeader from "../../components/ProfileHeader/profileHeader.jsx";
 import SegmentedTabs from "../../components/SegmentedTabs/segmentedTabs.jsx";
 import MatchEnCours from "../../components/MatchEnCours/matchEnCours.jsx";
@@ -8,6 +8,8 @@ import TeamComponent from "../../components/Team/team.jsx";
 import Spacer from "../../components/Spacer/spacer.jsx";
 import "./profile.css";
 import Teams from "../../components/Teams/teams.jsx";
+import { getMe } from "../../api/users.js";
+import { useAuth } from "../../context/AuthContext.jsx";
 
 const PROFILE_TABS = [
   { id: "informations", label: "Informations" },
@@ -45,11 +47,34 @@ const MOCK_TEAMS = [
 
 function Profile() {
   const [activeTab, setActiveTab] = useState("informations");
+  const { token } = useAuth();
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const baseUrl = import.meta.env.BASE_URL;
+
+  useEffect(() => {
+    if (!token) {
+      setLoading(false);
+      return;
+    }
+    getMe(token)
+      .then((res) => {
+        setUser(res);
+      })
+      .catch((err) => {
+        console.error("Erreur lors du chargement du profil :", err);
+      })
+      .finally(() => setLoading(false));
+  }, [token]);
+
+  if (loading) {
+    return <div className="profile"><p>Chargement…</p></div>;
+  }
 
   const data = {
     bigImage: "bg.png",
-    smallImage: "lol1.png",
-    name: "PedroPedro",
+    smallImage: user?.photo ? `${baseUrl}${user.photo}.png` : "lol1.png",
+    name: user ? `${user.firstName} ${user.name}` : "Utilisateur",
   };
 
   return (

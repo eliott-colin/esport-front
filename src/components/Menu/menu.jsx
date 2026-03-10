@@ -6,8 +6,8 @@ const Menu = ({ open }) => {
   return (
     <nav className={`menu ${open ? "open" : ""}`}>
       <Link to="/finalfocus/">Accueil</Link>
-      <a href="/">Événements</a>
-      <a href="/">Universités</a>
+      <Link to="/finalfocus/events">Événements</Link>
+      <Link to="/finalfocus/universities">Universités</Link>
       <Link to="/finalfocus/teams">Équipes</Link>
     </nav>
   );
