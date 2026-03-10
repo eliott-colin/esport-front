@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { setupInterceptors } from "../api/client.js";
 
 const AuthContext = createContext(null);
 
@@ -6,6 +7,19 @@ export function AuthProvider({ children }) {
   const [role, setRole] = useState(null);
   const [token, setToken] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  // On logout: clear Context and localStorage
+  const logout = () => {
+    setToken(null);
+    setRole(null);
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
+  };
+
+  // Enregistrer l'intercepteur axios une seule fois au montage
+  useEffect(() => {
+    setupInterceptors(logout);
+  }, []);
 
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
@@ -34,13 +48,6 @@ export function AuthProvider({ children }) {
     }
   };
 
-  // On logout: clear Context and localStorage
-  const logout = () => {
-    setToken(null);
-    setRole(null);
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-  };
 
   const isAuthenticated = !!token;
 

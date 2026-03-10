@@ -10,6 +10,8 @@ import Admin from "../pages/admin/admin.jsx";
 import Profile from "../pages/profile/profile.jsx";
 import EventsPage from "../pages/eventsPage/eventsPage.jsx";
 import EventDetails from "../pages/eventDetails/eventDetails.jsx";
+import UniversitiesPage from "../pages/universitiesPage/universitiesPage.jsx";
+import UniversityDetails from "../pages/universityDetails/universityDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +54,14 @@ const router = createBrowserRouter([
       {
         path: "/finalfocus/events/:id",
         element: <EventDetails />,
+      },
+      {
+        path: "/finalfocus/universities",
+        element: <UniversitiesPage />,
+      },
+      {
+        path: "/finalfocus/universities/:id",
+        element: <UniversityDetails />,
       },
     ],
   },
