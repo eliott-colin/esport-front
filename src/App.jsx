@@ -5,6 +5,7 @@ import Burger from "./components/Burger/burger.jsx";
 import Menu from "./components/Menu/menu.jsx";
 import { useMediaQuery } from "react-responsive";
 import { useAuth } from "./context/AuthContext.jsx";
+import "./index.css"
 
 function App() {
   const { isAuthenticated } = useAuth();
