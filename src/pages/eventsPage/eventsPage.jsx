@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Title from "../../components/Title/title.jsx";
 import EventContainer from "../../components/EventsContainer/eventsContainer.jsx";
 import Button from "../../components/Button/button.jsx";
+import { getEvents } from "../../api/events.js";
 
 function EventsPage() {
-  const data = [
-    { image: "event1.png", name: "Event 1", date: "17/06/2024" },
-    { image: "event2.png", name: "Event 2", date: "18/06/2024" },
-    { image: "event3.png", name: "Event 3", date: "19/06/2024" },
-    { image: "event1.png", name: "Event 4", date: "20/06/2024" },
-    { image: "event2.png", name: "Event 5", date: "21/06/2024" },
-    { image: "event3.png", name: "Event 3", date: "19/06/2024" },
-    { image: "event1.png", name: "Event 4", date: "20/06/2024" },
-    { image: "event2.png", name: "Event 5", date: "21/06/2024" },
-    { image: "event3.png", name: "Event 3", date: "19/06/2024" },
-    { image: "event1.png", name: "Event 4", date: "20/06/2024" },
-    { image: "event2.png", name: "Event 5", date: "21/06/2024" },
-  ];
+  const [events, setEvents] = useState(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    getEvents()
+      .then((res) => {
+        console.log("res", res);
+        setEvents(res);
+      })
+      .catch((err) => {
+        console.error("Erreur lors du chargement du profil :", err);
+      })
+      .finally(() => setLoading(false));
+  }, []);
+  console.log("azer", events);
   return (
     <div className="navBarSpace">
       <Title
@@ -26,7 +28,7 @@ function EventsPage() {
         fontSize="24px"
         arrow={false}
       />
-      <EventContainer data={data} />
+      <EventContainer events={events} />
       <Button
         data={{
           text: "Créer un événement",

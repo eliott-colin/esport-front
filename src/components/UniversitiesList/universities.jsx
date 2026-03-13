@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 function UniversitiesList({ universities }) {
   const baseUrl = import.meta.env.BASE_URL;
-
   return (
     <div>
       <Title
@@ -16,23 +15,27 @@ function UniversitiesList({ universities }) {
         arrow={true}
       />
       <div className="carrousel">
-        {universities.map((item, index) => (
-          <Link
-            key={item.id || index}
-            to={`/finalfocus/universities/${item.id || index}`}
-            style={{ textDecoration: "none" }}
-          >
-            <div>
-              <div className="image-wrapper">
-                <img src={`${baseUrl}${item.image}`} alt={item.name} />
+        {universities?.data?.length > 0 ? (
+          universities.data.map((item, index) => (
+            <Link
+              key={item.id || index}
+              to={`/finalfocus/universities/${item.id || index}`}
+              style={{ textDecoration: "none" }}
+            >
+              <div>
+                <div className="image-wrapper">
+                  <img src={`${baseUrl}${item.name}.png`} alt={item.name} />
+                </div>
+                <p className="p-uni">{item.name}</p>
+                <p className="p-uni smallText">
+                  {item.ville} - {item.postalCode}
+                </p>
               </div>
-              <p className="p-uni">{item.name}</p>
-              <p className="p-uni smallText">
-                {item.ville} - {item.postalCode}
-              </p>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

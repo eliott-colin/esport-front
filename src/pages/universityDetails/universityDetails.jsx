@@ -85,20 +85,68 @@ const MOCK_UNIVERSITIES = {
 // Teams associées à chaque université (via users → isPart → teams)
 const MOCK_UNI_TEAMS = {
   1: [
-    { Id_teams: 1, name: "Team Alpha", dateCreate: "2025-01-10", logo: "team1.png", memberCount: 5 },
-    { Id_teams: 2, name: "Team Beta", dateCreate: "2025-02-14", logo: "team2.png", memberCount: 4 },
-    { Id_teams: 5, name: "Bordeaux Esport", dateCreate: "2025-05-01", logo: "team3.png", memberCount: 6 },
+    {
+      Id_teams: 1,
+      name: "Team Alpha",
+      dateCreate: "2025-01-10",
+      logo: "team1.png",
+      memberCount: 5,
+    },
+    {
+      Id_teams: 2,
+      name: "Team Beta",
+      dateCreate: "2025-02-14",
+      logo: "team2.png",
+      memberCount: 4,
+    },
+    {
+      Id_teams: 5,
+      name: "Bordeaux Esport",
+      dateCreate: "2025-05-01",
+      logo: "team3.png",
+      memberCount: 6,
+    },
   ],
   2: [
-    { Id_teams: 3, name: "Team Gamma", dateCreate: "2025-03-20", logo: "team3.png", memberCount: 6 },
-    { Id_teams: 6, name: "Paris Legends", dateCreate: "2025-04-15", logo: "logo.png", memberCount: 5 },
+    {
+      Id_teams: 3,
+      name: "Team Gamma",
+      dateCreate: "2025-03-20",
+      logo: "team3.png",
+      memberCount: 6,
+    },
+    {
+      Id_teams: 6,
+      name: "Paris Legends",
+      dateCreate: "2025-04-15",
+      logo: "logo.png",
+      memberCount: 5,
+    },
   ],
   3: [
-    { Id_teams: 4, name: "Team Delta", dateCreate: "2025-04-05", logo: "logo.png", memberCount: 3 },
-    { Id_teams: 7, name: "Lyon Gaming", dateCreate: "2025-06-10", logo: "team1.png", memberCount: 4 },
+    {
+      Id_teams: 4,
+      name: "Team Delta",
+      dateCreate: "2025-04-05",
+      logo: "logo.png",
+      memberCount: 3,
+    },
+    {
+      Id_teams: 7,
+      name: "Lyon Gaming",
+      dateCreate: "2025-06-10",
+      logo: "team1.png",
+      memberCount: 4,
+    },
   ],
   4: [
-    { Id_teams: 8, name: "Lille Esport", dateCreate: "2025-07-20", logo: "team2.png", memberCount: 5 },
+    {
+      Id_teams: 8,
+      name: "Lille Esport",
+      dateCreate: "2025-07-20",
+      logo: "team2.png",
+      memberCount: 5,
+    },
   ],
 };
 
@@ -115,7 +163,10 @@ function UniversityDetails() {
   const playersCount = MOCK_UNI_PLAYERS_COUNT[id] || 0;
 
   return (
-    <div className="university-details navBarSpace" style={{ paddingTop: "0", maxWidth: "100%" }}>
+    <div
+      className="university-details navBarSpace"
+      style={{ paddingTop: "0", maxWidth: "100%" }}
+    >
       <ProfileHeader
         props={{
           bigImage: "bg.png",
@@ -185,16 +236,21 @@ function UniversityDetails() {
               </div>
               <div className="university-info-row">
                 <span className="university-info-label">Ville</span>
-                <span className="university-info-value">{university.cities.name}</span>
+                <span className="university-info-value">
+                  {university.cities.name}
+                </span>
               </div>
               <div className="university-info-row">
                 <span className="university-info-label">Code postal</span>
-                <span className="university-info-value">{university.postalCode}</span>
+                <span className="university-info-value">
+                  {university.postalCode}
+                </span>
               </div>
               <div className="university-info-row">
                 <span className="university-info-label">Département</span>
                 <span className="university-info-value">
-                  {university.cities.departements.name} ({university.cities.departements.code})
+                  {university.cities.departements.name} (
+                  {university.cities.departements.code})
                 </span>
               </div>
               <div className="university-info-row">
@@ -234,7 +290,8 @@ function UniversityDetails() {
                       </span>
                     </div>
                     <span className="university-team-date">
-                      Créée le {new Date(team.dateCreate).toLocaleDateString("fr-FR")}
+                      Créée le{" "}
+                      {new Date(team.dateCreate).toLocaleDateString("fr-FR")}
                     </span>
                   </div>
                 </Link>
@@ -247,7 +304,10 @@ function UniversityDetails() {
       {/* ═══════ TAB : Équipes ═══════ */}
       {activeTab === "teams" && (
         <div className="university-details-content">
-          <div className="university-details-col-left" style={{ flex: "1 1 100%" }}>
+          <div
+            className="university-details-col-left"
+            style={{ flex: "1 1 100%" }}
+          >
             <Title
               title={`ÉQUIPES DE ${university.name.toUpperCase()}`}
               color="linear-gradient(89deg, #F80DFD -0.19%, #8B1EDF 103.13%)"
@@ -256,7 +316,13 @@ function UniversityDetails() {
             />
             <div className="university-teams-card">
               {teams.length === 0 && (
-                <p style={{ color: "#8b8b9e", fontFamily: "Roboto, sans-serif", textAlign: "center" }}>
+                <p
+                  style={{
+                    color: "#8b8b9e",
+                    fontFamily: "Roboto, sans-serif",
+                    textAlign: "center",
+                  }}
+                >
                   Aucune équipe pour cette université.
                 </p>
               )}
@@ -279,7 +345,8 @@ function UniversityDetails() {
                       </span>
                     </div>
                     <span className="university-team-date">
-                      Créée le {new Date(team.dateCreate).toLocaleDateString("fr-FR")}
+                      Créée le{" "}
+                      {new Date(team.dateCreate).toLocaleDateString("fr-FR")}
                     </span>
                   </div>
                 </Link>
@@ -330,5 +397,3 @@ function getOSMMarker(cityName) {
 }
 
 export default UniversityDetails;
-
-

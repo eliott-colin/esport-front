@@ -48,7 +48,6 @@ export function AuthProvider({ children }) {
     }
   };
 
-
   const isAuthenticated = !!token;
 
   const value = {

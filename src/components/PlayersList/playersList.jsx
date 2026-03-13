@@ -8,7 +8,11 @@ function PlayersList({ data, onRemovePlayer }) {
       <h1>PlayersList</h1>
       <div className="players-wrapper">
         {data.map((element, index) => (
-          <PlayerTab key={element.id || index} data={element} onRemove={onRemovePlayer} />
+          <PlayerTab
+            key={element.id || index}
+            data={element}
+            onRemove={onRemovePlayer}
+          />
         ))}
       </div>
     </div>

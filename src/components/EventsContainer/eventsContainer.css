@@ -7,7 +7,6 @@
   display: grid;
   padding: 8px 0;
   align-self: stretch;
-  grid-template-rows: repeat(4, minmax(0, 1fr));
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
