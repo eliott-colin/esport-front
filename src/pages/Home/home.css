@@ -21,7 +21,7 @@ body {
   border-radius: 14px;
   position: relative;
   overflow: hidden;
-  background: url("/finalfocus/hero-bg.jpg") center / cover no-repeat;
+  background: url("/finalfocus/header.png") center / cover no-repeat;
 }
 
 .hero-overlay {
@@ -101,13 +101,6 @@ body {
 
 .hero-actions .button-wrapper {
   margin: 10px 6px;
-}
-
-.hero-actions .button-wrapper .button {
-  -webkit-background-clip: unset;
-  background-clip: unset;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
 }
 
 @media (max-width: 768px) {
