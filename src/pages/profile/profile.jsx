@@ -29,8 +29,8 @@ const MOCK_MATCH = {
 };
 
 const MOCK_EVENTS = [
-  { image: "event1.webp", name: "Tournoi Waven S2", date: "17/06/2024" },
-  { image: "event2.webp", name: "LAN Bordeaux", date: "24/06/2024" },
+  { image: "event1.webp", name: "event1", date: "17/06/2024" },
+  { image: "event2.webp", name: "event2", date: "24/06/2024" },
 ];
 
 const MOCK_TEAMS = [
