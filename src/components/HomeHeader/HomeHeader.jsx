@@ -1,5 +1,6 @@
 import React from "react";
 import "./HomeHeader.css";
+import Button from "../Button/button.jsx";
 
 function HomeHeader() {
   return (
