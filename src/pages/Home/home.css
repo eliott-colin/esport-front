@@ -21,7 +21,7 @@ body {
   border-radius: 14px;
   position: relative;
   overflow: hidden;
-  background: url("/finalfocus/header.png") center / cover no-repeat;
+  background: url("/finalfocus/header.webp") center / cover no-repeat;
 }
 
 .hero-overlay {

@@ -24,7 +24,7 @@ function UniversitiesList({ universities }) {
             >
               <div>
                 <div className="image-wrapper">
-                  <img src={`${baseUrl}${item.name}.png`} alt={item.name} />
+                  <img src={`${baseUrl}${item.name}.webp`} alt={item.name} />
                 </div>
                 <p className="p-uni">{item.name}</p>
                 <p className="p-uni smallText">

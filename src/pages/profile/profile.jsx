@@ -22,27 +22,27 @@ const MOCK_MATCH = {
   league: "1001 Griffes",
   game: "Waven",
   status: "En live",
-  home: { name: "Team Alpha", logo: "lol1.png" },
-  away: { name: "Team Beta", logo: "lol2.png" },
+  home: { name: "Team Alpha", logo: "lol1.webp" },
+  away: { name: "Team Beta", logo: "lol2.webp" },
   score: { home: 0, away: 0 },
   date: "04.04.2023",
 };
 
 const MOCK_EVENTS = [
-  { image: "event1.png", name: "Tournoi Waven S2", date: "17/06/2024" },
-  { image: "event2.png", name: "LAN Bordeaux", date: "24/06/2024" },
+  { image: "event1.webp", name: "Tournoi Waven S2", date: "17/06/2024" },
+  { image: "event2.webp", name: "LAN Bordeaux", date: "24/06/2024" },
 ];
 
 const MOCK_TEAMS = [
   {
-    image: "./team1.png",
+    image: "./team1.webp",
     name: "Team Alpha",
     members: "5 membres",
-    imageGame: "f.png",
+    imageGame: "f.webp",
   },
-  { image: "./team2.png", name: "Team Beta", members: "4 membres" },
-  { image: "./logo.png", name: "Team Gamma", members: "6 membres" },
-  { image: "./lol2.png", name: "Team Delta", members: "3 membres" },
+  { image: "./team2.webp", name: "Team Beta", members: "4 membres" },
+  { image: "./logo.webp", name: "Team Gamma", members: "6 membres" },
+  { image: "./lol2.webp", name: "Team Delta", members: "3 membres" },
 ];
 
 function Profile() {
@@ -76,8 +76,8 @@ function Profile() {
   }
 
   const data = {
-    bigImage: "bg.png",
-    smallImage: user?.photo ? `${baseUrl}${user.photo}.png` : "lol1.png",
+    bigImage: "bg.webp",
+    smallImage: user?.photo ? `${baseUrl}${user.photo}.webp` : "lol1.webp",
     name: user ? `${user.firstName} ${user.name}` : "Utilisateur",
   };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import arrowImage from "/arrow.png";
+import arrowImage from "/arrow.webp";
 
 function Title({ title, color, colorFont, fontSize, arrow, center = false }) {
   return (

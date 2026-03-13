@@ -106,34 +106,10 @@ const MOCK_PARTICIPANTS = [
 ];
 
 const MOCK_TEAMS = [
-  {
-    Id_teams: 1,
-    name: "Team Alpha",
-    dateCreate: "2025-01-10",
-    logo: "team1.png",
-    memberCount: 5,
-  },
-  {
-    Id_teams: 2,
-    name: "Team Beta",
-    dateCreate: "2025-02-14",
-    logo: "team2.png",
-    memberCount: 4,
-  },
-  {
-    Id_teams: 3,
-    name: "Team Gamma",
-    dateCreate: "2025-03-20",
-    logo: "team3.png",
-    memberCount: 6,
-  },
-  {
-    Id_teams: 4,
-    name: "Team Delta",
-    dateCreate: "2025-04-05",
-    logo: "logo.png",
-    memberCount: 3,
-  },
+  { Id_teams: 1, name: "Team Alpha", dateCreate: "2025-01-10", logo: "team1.webp", memberCount: 5 },
+  { Id_teams: 2, name: "Team Beta", dateCreate: "2025-02-14", logo: "team2.webp", memberCount: 4 },
+  { Id_teams: 3, name: "Team Gamma", dateCreate: "2025-03-20", logo: "team3.webp", memberCount: 6 },
+  { Id_teams: 4, name: "Team Delta", dateCreate: "2025-04-05", logo: "logo.webp", memberCount: 3 },
 ];
 
 const MOCK_BRACKETS = [
@@ -146,8 +122,8 @@ const MOCK_BRACKETS = [
         round: "Demi-finale 1",
         dateMatch: "2026-03-15T14:00:00.000Z",
         score: "2 - 1",
-        team1: { name: "Team Alpha", logo: "team1.png" },
-        team2: { name: "Team Beta", logo: "team2.png" },
+        team1: { name: "Team Alpha", logo: "team1.webp" },
+        team2: { name: "Team Beta", logo: "team2.webp" },
         winner: "Team Alpha",
       },
       {
@@ -155,8 +131,8 @@ const MOCK_BRACKETS = [
         round: "Demi-finale 2",
         dateMatch: "2026-03-15T16:00:00.000Z",
         score: "3 - 0",
-        team1: { name: "Team Gamma", logo: "team3.png" },
-        team2: { name: "Team Delta", logo: "logo.png" },
+        team1: { name: "Team Gamma", logo: "team3.webp" },
+        team2: { name: "Team Delta", logo: "logo.webp" },
         winner: "Team Gamma",
       },
     ],
@@ -170,8 +146,8 @@ const MOCK_BRACKETS = [
         round: "Finale",
         dateMatch: "2026-03-16T18:00:00.000Z",
         score: null,
-        team1: { name: "Team Alpha", logo: "team1.png" },
-        team2: { name: "Team Gamma", logo: "team3.png" },
+        team1: { name: "Team Alpha", logo: "team1.webp" },
+        team2: { name: "Team Gamma", logo: "team3.webp" },
         winner: null,
       },
     ],
@@ -214,8 +190,8 @@ const MOCK_LIVE_MATCH = {
   league: MOCK_EVENT.name,
   game: MOCK_EVENT.eventGames.name,
   status: "En live",
-  home: { name: "Team Alpha", logo: "team1.png" },
-  away: { name: "Team Gamma", logo: "team3.png" },
+  home: { name: "Team Alpha", logo: "team1.webp" },
+  away: { name: "Team Gamma", logo: "team3.webp" },
   score: { home: 1, away: 1 },
   date: "15.03.2026",
 };
@@ -252,8 +228,8 @@ function EventDetails() {
     >
       <ProfileHeader
         props={{
-          bigImage: "bg.png",
-          smallImage: "event1.png",
+          bigImage: "",
+          smallImage: "event1.webp",
           name: event.name,
         }}
       />
@@ -302,7 +278,7 @@ function EventDetails() {
                 <div key={ref.id_user} className="event-referee-row">
                   <img
                     className="event-referee-avatar"
-                    src={`${baseUrl}${ref.users.photo}.png`}
+                    src={`${baseUrl}${ref.users.photo}.webp`}
                     alt={ref.users.firstname}
                   />
                   <div>
@@ -460,7 +436,7 @@ function EventDetails() {
                       <div key={p.id_user} className="event-team-row">
                         <img
                           className="event-team-logo"
-                          src={`${baseUrl}${p.users.photo}.png`}
+                          src={`${baseUrl}${p.users.photo}.webp`}
                           alt={p.users.firstname}
                         />
                         <div>
