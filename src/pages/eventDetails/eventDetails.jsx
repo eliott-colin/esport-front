@@ -106,10 +106,34 @@ const MOCK_PARTICIPANTS = [
 ];
 
 const MOCK_TEAMS = [
-  { Id_teams: 1, name: "Team Alpha", dateCreate: "2025-01-10", logo: "team1.png", memberCount: 5 },
-  { Id_teams: 2, name: "Team Beta", dateCreate: "2025-02-14", logo: "team2.png", memberCount: 4 },
-  { Id_teams: 3, name: "Team Gamma", dateCreate: "2025-03-20", logo: "team3.png", memberCount: 6 },
-  { Id_teams: 4, name: "Team Delta", dateCreate: "2025-04-05", logo: "logo.png", memberCount: 3 },
+  {
+    Id_teams: 1,
+    name: "Team Alpha",
+    dateCreate: "2025-01-10",
+    logo: "team1.png",
+    memberCount: 5,
+  },
+  {
+    Id_teams: 2,
+    name: "Team Beta",
+    dateCreate: "2025-02-14",
+    logo: "team2.png",
+    memberCount: 4,
+  },
+  {
+    Id_teams: 3,
+    name: "Team Gamma",
+    dateCreate: "2025-03-20",
+    logo: "team3.png",
+    memberCount: 6,
+  },
+  {
+    Id_teams: 4,
+    name: "Team Delta",
+    dateCreate: "2025-04-05",
+    logo: "logo.png",
+    memberCount: 3,
+  },
 ];
 
 const MOCK_BRACKETS = [
@@ -222,7 +246,10 @@ function EventDetails() {
   };
 
   return (
-    <div className="event-details navBarSpace" style={{ paddingTop: "0", maxWidth: "100%" }}>
+    <div
+      className="event-details navBarSpace"
+      style={{ paddingTop: "0", maxWidth: "100%" }}
+    >
       <ProfileHeader
         props={{
           bigImage: "bg.png",
@@ -300,11 +327,15 @@ function EventDetails() {
             <div className="event-info-card">
               <div className="event-info-row">
                 <span className="event-info-label">Date</span>
-                <span className="event-info-value">{formatDate(event.eventDate)}</span>
+                <span className="event-info-value">
+                  {formatDate(event.eventDate)}
+                </span>
               </div>
               <div className="event-info-row">
                 <span className="event-info-label">Jeu</span>
-                <span className="event-info-value">{event.eventGames.name}</span>
+                <span className="event-info-value">
+                  {event.eventGames.name}
+                </span>
               </div>
               <div className="event-info-row">
                 <span className="event-info-label">Max équipes</span>
@@ -312,11 +343,15 @@ function EventDetails() {
               </div>
               <div className="event-info-row">
                 <span className="event-info-label">Équipes inscrites</span>
-                <span className="event-info-value">{MOCK_TEAMS.length} / {event.maxTeam}</span>
+                <span className="event-info-value">
+                  {MOCK_TEAMS.length} / {event.maxTeam}
+                </span>
               </div>
               <div className="event-info-row">
                 <span className="event-info-label">Statut</span>
-                <span className={`event-status-badge event-status-badge--${event.leaderboardType}`}>
+                <span
+                  className={`event-status-badge event-status-badge--${event.leaderboardType}`}
+                >
                   <span className="event-status-dot" />
                   {statusLabel[event.leaderboardType] || event.leaderboardType}
                 </span>
@@ -340,7 +375,9 @@ function EventDetails() {
                     alt={team.name}
                   />
                   <span className="event-team-name">{team.name}</span>
-                  <span className="event-team-members">{team.memberCount} membres</span>
+                  <span className="event-team-members">
+                    {team.memberCount} membres
+                  </span>
                 </div>
               ))}
             </div>
@@ -365,7 +402,9 @@ function EventDetails() {
                     <div key={match.Id_matchs} className="event-match-row">
                       <div>
                         <div className="event-match-round">{match.round}</div>
-                        <div className="event-match-date">{formatDate(match.dateMatch)}</div>
+                        <div className="event-match-date">
+                          {formatDate(match.dateMatch)}
+                        </div>
                       </div>
                       <div className="event-match-teams">
                         <img
@@ -373,9 +412,13 @@ function EventDetails() {
                           src={`${baseUrl}${match.team1.logo}`}
                           alt={match.team1.name}
                         />
-                        <span className="event-match-team-name">{match.team1.name}</span>
+                        <span className="event-match-team-name">
+                          {match.team1.name}
+                        </span>
                         <span className="event-match-vs">VS</span>
-                        <span className="event-match-team-name">{match.team2.name}</span>
+                        <span className="event-match-team-name">
+                          {match.team2.name}
+                        </span>
                         <img
                           className="event-match-team-logo"
                           src={`${baseUrl}${match.team2.logo}`}
@@ -401,7 +444,7 @@ function EventDetails() {
           <div className="event-details-col-left" style={{ flex: "1 1 100%" }}>
             {MOCK_TEAMS.map((team) => {
               const teamParticipants = MOCK_PARTICIPANTS.filter(
-                (p) => p.Id_teams === team.Id_teams
+                (p) => p.Id_teams === team.Id_teams,
               );
               if (teamParticipants.length === 0) return null;
               return (
@@ -453,7 +496,9 @@ function EventDetails() {
                 <span className="event-stat-label">Équipes</span>
               </div>
               <div className="event-stat-item">
-                <span className="event-stat-value">{MOCK_PARTICIPANTS.length}</span>
+                <span className="event-stat-value">
+                  {MOCK_PARTICIPANTS.length}
+                </span>
                 <span className="event-stat-label">Participants</span>
               </div>
               <div className="event-stat-item">

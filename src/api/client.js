@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://213.156.132.215:8080/api/v1/",
+  baseURL: "http://localhost:3000/api/v1/",
 });
 
 let interceptorId = null;
@@ -15,7 +15,10 @@ export function setupInterceptors(logoutFn) {
   interceptorId = api.interceptors.response.use(
     (response) => {
       // Certaines API renvoient un 200 avec status FAILED dans le body
-      if (response.data?.status === "FAILED" && response.data?.message === "Token invalide ou expiré") {
+      if (
+        response.data?.status === "FAILED" &&
+        response.data?.message === "Token invalide ou expiré"
+      ) {
         logoutFn();
         window.location.href = "/finalfocus/login";
         return Promise.reject(new Error(response.data.message));
@@ -24,7 +27,10 @@ export function setupInterceptors(logoutFn) {
     },
     (error) => {
       const data = error.response?.data;
-      if (data?.status === "FAILED" && data?.message === "Token invalide ou expiré") {
+      if (
+        data?.status === "FAILED" &&
+        data?.message === "Token invalide ou expiré"
+      ) {
         logoutFn();
         window.location.href = "/finalfocus/login";
       }
@@ -32,4 +38,3 @@ export function setupInterceptors(logoutFn) {
     },
   );
 }
-

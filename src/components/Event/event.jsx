@@ -7,7 +7,7 @@ function Event(data) {
       <div className="event-image-wrapper">
         <img
           className="event-img"
-          src={`${baseUrl}${data.data.image}`}
+          src={`${baseUrl}${data.data.name}.png`}
           alt={data.data.name}
         />
       </div>

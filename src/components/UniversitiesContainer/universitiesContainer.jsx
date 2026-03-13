@@ -37,4 +37,3 @@ function UniversitiesContainer({ data }) {
 }
 
 export default UniversitiesContainer;
-

@@ -2,7 +2,7 @@ import Event from "../Event/event";
 import Title from "../Title/title";
 import "./events.css";
 
-function Events() {
+function Events({ events }) {
   return (
     <>
       <Title
@@ -14,21 +14,13 @@ function Events() {
       />
 
       <div className="events-div">
-        {[
-          { image: "event1.png", name: "Event 1", date: "17/06/2024" },
-          { image: "event2.png", name: "Event 2", date: "18/06/2024" },
-          { image: "event3.png", name: "Event 3", date: "19/06/2024" },
-          { image: "event1.png", name: "Event 4", date: "20/06/2024" },
-          { image: "event2.png", name: "Event 5", date: "21/06/2024" },
-          { image: "event3.png", name: "Event 3", date: "19/06/2024" },
-          { image: "event1.png", name: "Event 4", date: "20/06/2024" },
-          { image: "event2.png", name: "Event 5", date: "21/06/2024" },
-          { image: "event3.png", name: "Event 3", date: "19/06/2024" },
-          { image: "event1.png", name: "Event 4", date: "20/06/2024" },
-          { image: "event2.png", name: "Event 5", date: "21/06/2024" },
-        ].map((element, index) => (
-          <Event key={index} data={element} />
-        ))}
+        {events?.data.length > 0 ? (
+          events.data.map((element, index) => (
+            <Event key={index} data={element} />
+          ))
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );

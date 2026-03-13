@@ -68,7 +68,11 @@ function Profile() {
   }, [token]);
 
   if (loading) {
-    return <div className="profile"><p>Chargement…</p></div>;
+    return (
+      <div className="profile">
+        <p>Chargement…</p>
+      </div>
+    );
   }
 
   const data = {
