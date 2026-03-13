@@ -12,8 +12,8 @@ function HomeHeader() {
           Bienvenue sur <span className="hero-highlight">FinalFocus</span>
         </h1>
         <p className="hero-subtitle">
-          La plateforme de gestion de <strong>tournois</strong> et d'
-          <strong>événements esport</strong> universitaires. Créez votre équipe,
+          La plateforme de gestion de tournois et d'
+          événements esport universitaires. Créez votre équipe,
           participez à des compétitions et suivez vos matchs en direct.
         </p>
         <div className="hero-actions">
