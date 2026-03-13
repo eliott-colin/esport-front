@@ -12,7 +12,6 @@ function Events({ events }) {
         fontSize="2.5vh"
         arrow={true}
       />
-
       <div className="events-div">
         {events?.data.length > 0 ? (
           events.data.map((element, index) => (

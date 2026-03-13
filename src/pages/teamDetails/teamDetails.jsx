@@ -14,13 +14,13 @@ const TEAMS_TABS = [
 const INITIAL_PLAYERS = [
   {
     id: 1,
-    image: "lol1.png",
+    image: "lol1.webp",
     name: "Player 1",
     members: "5 members",
   },
   {
     id: 2,
-    image: "lol2.png",
+    image: "lol2.webp",
     name: "Player 2",
     members: "4 members",
   },
@@ -40,8 +40,8 @@ function TeamDetails() {
     <div className="navBarSpace" style={{ paddingTop: "0", maxWidth: "100%" }}>
       <ProfileHeader
         props={{
-          bigImage: "bg.png",
-          smallImage: "lol1.png",
+          bigImage: "bg.webp",
+          smallImage: "lol1.webp",
           name: "Los Diaboles",
         }}
       />

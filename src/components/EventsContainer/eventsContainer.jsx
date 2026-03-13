@@ -3,7 +3,6 @@ import "./eventsContainer.css";
 import { Link } from "react-router-dom";
 
 function EventsContainer({ events }) {
-  console.log("elitot", events);
   return (
     <div className="events-section">
       <div className="events-wrapper">

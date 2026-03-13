@@ -19,7 +19,7 @@ const MOCK_UNIVERSITIES = {
   1: {
     Id_universities: 1,
     name: "Université de Bordeaux",
-    image: "lol1.png",
+    image: "lol1.webp",
     cities: {
       Id_cities: 1,
       name: "Bordeaux",
@@ -35,7 +35,7 @@ const MOCK_UNIVERSITIES = {
   2: {
     Id_universities: 2,
     name: "Université de Paris",
-    image: "lol2.png",
+    image: "lol2.webp",
     cities: {
       Id_cities: 2,
       name: "Paris",
@@ -51,7 +51,7 @@ const MOCK_UNIVERSITIES = {
   3: {
     Id_universities: 3,
     name: "Université de Lyon",
-    image: "lol1.png",
+    image: "lol1.webp",
     cities: {
       Id_cities: 3,
       name: "Lyon",
@@ -67,7 +67,7 @@ const MOCK_UNIVERSITIES = {
   4: {
     Id_universities: 4,
     name: "Université de Lille",
-    image: "lol2.png",
+    image: "lol2.webp",
     cities: {
       Id_cities: 4,
       name: "Lille",
@@ -85,68 +85,20 @@ const MOCK_UNIVERSITIES = {
 // Teams associées à chaque université (via users → isPart → teams)
 const MOCK_UNI_TEAMS = {
   1: [
-    {
-      Id_teams: 1,
-      name: "Team Alpha",
-      dateCreate: "2025-01-10",
-      logo: "team1.png",
-      memberCount: 5,
-    },
-    {
-      Id_teams: 2,
-      name: "Team Beta",
-      dateCreate: "2025-02-14",
-      logo: "team2.png",
-      memberCount: 4,
-    },
-    {
-      Id_teams: 5,
-      name: "Bordeaux Esport",
-      dateCreate: "2025-05-01",
-      logo: "team3.png",
-      memberCount: 6,
-    },
+    { Id_teams: 1, name: "Team Alpha", dateCreate: "2025-01-10", logo: "team1.webp", memberCount: 5 },
+    { Id_teams: 2, name: "Team Beta", dateCreate: "2025-02-14", logo: "team2.webp", memberCount: 4 },
+    { Id_teams: 5, name: "Bordeaux Esport", dateCreate: "2025-05-01", logo: "team3.webp", memberCount: 6 },
   ],
   2: [
-    {
-      Id_teams: 3,
-      name: "Team Gamma",
-      dateCreate: "2025-03-20",
-      logo: "team3.png",
-      memberCount: 6,
-    },
-    {
-      Id_teams: 6,
-      name: "Paris Legends",
-      dateCreate: "2025-04-15",
-      logo: "logo.png",
-      memberCount: 5,
-    },
+    { Id_teams: 3, name: "Team Gamma", dateCreate: "2025-03-20", logo: "team3.webp", memberCount: 6 },
+    { Id_teams: 6, name: "Paris Legends", dateCreate: "2025-04-15", logo: "logo.webp", memberCount: 5 },
   ],
   3: [
-    {
-      Id_teams: 4,
-      name: "Team Delta",
-      dateCreate: "2025-04-05",
-      logo: "logo.png",
-      memberCount: 3,
-    },
-    {
-      Id_teams: 7,
-      name: "Lyon Gaming",
-      dateCreate: "2025-06-10",
-      logo: "team1.png",
-      memberCount: 4,
-    },
+    { Id_teams: 4, name: "Team Delta", dateCreate: "2025-04-05", logo: "logo.webp", memberCount: 3 },
+    { Id_teams: 7, name: "Lyon Gaming", dateCreate: "2025-06-10", logo: "team1.webp", memberCount: 4 },
   ],
   4: [
-    {
-      Id_teams: 8,
-      name: "Lille Esport",
-      dateCreate: "2025-07-20",
-      logo: "team2.png",
-      memberCount: 5,
-    },
+    { Id_teams: 8, name: "Lille Esport", dateCreate: "2025-07-20", logo: "team2.webp", memberCount: 5 },
   ],
 };
 
@@ -169,7 +121,7 @@ function UniversityDetails() {
     >
       <ProfileHeader
         props={{
-          bigImage: "bg.png",
+          bigImage: "bg.webp",
           smallImage: university.image,
           name: university.name,
         }}

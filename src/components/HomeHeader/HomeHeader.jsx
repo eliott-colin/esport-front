@@ -39,4 +39,4 @@ function HomeHeader() {
     </div>
   );
 }
-export default MatchEnCours;
+export default HomeHeader;

@@ -6,40 +6,40 @@ import Button from "../../components/Button/button";
 function Team() {
   let data = [
     {
-      image: "team1.png",
+      image: "team1.webp",
       name: "Team 1",
       members: "5 members",
-      imageGame: "f.png",
+      imageGame: "f.webp",
     },
     {
-      image: "team2.png",
+      image: "team2.webp",
       name: "Team 2",
       members: "4 members",
-      imageGame: "f.png",
+      imageGame: "f.webp",
     },
     {
-      image: "team3.png",
+      image: "team3.webp",
       name: "Team 3",
       members: "6 members",
-      imageGame: "f.png",
+      imageGame: "f.webp",
     },
     {
-      image: "team1.png",
+      image: "team1.webp",
       name: "Team 4",
       members: "5 members",
-      imageGame: "f.png",
+      imageGame: "f.webp",
     },
     {
-      image: "team2.png",
+      image: "team2.webp",
       name: "Team 5",
       members: "4 members",
-      imageGame: "f.png",
+      imageGame: "f.webp",
     },
     {
-      image: "team3.png",
+      image: "team3.webp",
       name: "Team 6",
       members: "6 members",
-      imageGame: "f.png",
+      imageGame: "f.webp",
     },
   ];
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import "./navbar.css";
-import logo from "/logo.png";
+import logo from "/logo.webp";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext.jsx";
 

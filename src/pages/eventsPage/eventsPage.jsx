@@ -18,7 +18,6 @@ function EventsPage() {
       })
       .finally(() => setLoading(false));
   }, []);
-  console.log("azer", events);
   return (
     <div className="navBarSpace">
       <Title
